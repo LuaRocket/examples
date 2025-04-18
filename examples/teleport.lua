@@ -13,7 +13,7 @@ commands.new()
   .executor(function(sender, args)
     local target = players.get(args[1])
 
-    if (target == nil) then
+    if type(target) == "nil" then
       sender.send("<red>This player is offline.")
       return
     end
